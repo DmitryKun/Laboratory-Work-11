@@ -1,0 +1,21 @@
+name: DataSchemaCodeConvertion
+on: 
+ # обробка лише події типу push
+ # для декількох значень викристовується дужки, наприклад, [push, pull_request]
+push:
+ # обробка подій лише для окремої гілки
+ branches: main
+jobs:
+ DataSchemaCodeConvertion:
+ # Використання Docker-Image із вказаною версією ОС
+ runs-on: ubuntu-latest
+ steps:
+  - name: Checkout Code in Repository
+  # Клонування репозиторію для подальшої роботи з файлами на сервері
+  # в каталозі $GITHUB_WORKSPACE 
+  uses: "actions/checkoit@v3"
+  name: Start DataSchemaCodeConvertion
+  # Виконання декількох послідовних команд shell-ітератором 
+  run: 
+   pip install sqlfluff
+   sqlfluff lint $GITHUB_WORKSPACE/DataSchema.sql --dialect postgres
