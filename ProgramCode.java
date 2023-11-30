@@ -13,11 +13,11 @@ public class Settings {
         // Логіка зміни мережевого статусу
         if (newStatus.equals("online")) {
             // Зміна статусу з offline на online
-            // Тут можна викликати методи або логіку для зміни статусу користувача
+            this.status = "online";
             System.out.println("Змінено статус на online для користувача з ID: " + userID);
         } else {
             // Зміна статусу з online на offline
-            // Тут також можна викликати методи або логіку для зміни статусу користувача
+            this.status = "offline";
             System.out.println("Змінено статус на offline для користувача з ID: " + userID);
         }
 
