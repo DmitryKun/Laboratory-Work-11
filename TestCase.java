@@ -39,4 +39,4 @@ public class SettingsTest {
         assertEquals(1, result);
         assertEquals("offline", settings.getStatus());
     }
-}
+} 
