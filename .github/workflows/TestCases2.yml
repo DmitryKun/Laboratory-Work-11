@@ -17,9 +17,9 @@ jobs:
         distribution: 'adopt'
 
     - name: Find TestCases.java
-      run: find ./src/main -name "TestCases.java"
+      run: find ./ -name "TestCases.java"
 
     - name: Compile and Run JUnit tests
       run: |
-        javac -cp junit-platform-console-standalone-1.8.2.jar:. $(find ./src/main -name "TestCases.java")
-        java -jar junit-platform-console-standalone-1.8.2.jar --class-path ./src/main --scan-class-path
+        javac -cp junit-platform-console-standalone-1.8.2.jar:. $(find ./ -name "TestCases.java")
+        java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
