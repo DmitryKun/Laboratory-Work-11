@@ -18,7 +18,7 @@ public class Settings {
         } else {
             // Зміна статусу з online на offline
             this.status = "offline";
-            System.out.println("Змінено статус на offline для користувача з ID: " + userID);
+            System.out.println("Змінено статус на offline для користувача з ID: " + userID); 
         }
 
         // Повертає 1 для позначення успішної зміни статусу
