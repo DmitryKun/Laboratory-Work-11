@@ -13,11 +13,11 @@ public class ProgramCode {
         // Логіка зміни мережевого статусу
         if (newStatus.equals("online")) {
             // Зміна статусу з offline на online
-            
+            this.status="online"
             System.out.println("Змінено статус на online для користувача з ID: " + userID);
         } else {
             // Зміна статусу з online на offline
-            
+            this.status="offline"
             System.out.println("Змінено статус на offline для користувача з ID: " + userID); 
         }
 
