@@ -22,6 +22,6 @@ public class Settings {
         }
 
         // Повертає 1 для позначення успішної зміни статусу
-        return 1;
+        return 1; 
     }
 }
