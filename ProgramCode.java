@@ -1,4 +1,4 @@
-public class Settings {
+public class ProgramCode {
     public int changeStatus(String userID, String newStatus) {
         // Перевірка, чи ідентифікатор користувача не є NULL або порожнім рядком
         if (userID == null || userID.isEmpty()) {
