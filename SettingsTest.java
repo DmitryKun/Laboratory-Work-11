@@ -1,4 +1,4 @@
-public class Settings {
+public class SettingsTest {
     private String status;
 
     public int changeStatus(String userID, String newStatus) {
