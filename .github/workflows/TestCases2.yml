@@ -16,7 +16,11 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
+    - name: Find TestCases.java
+      run: find . -path "*/main/TestCases.java"
+
     - name: Compile and Run JUnit tests
       run: |
-        javac -cp junit-platform-console-standalone-1.8.2.jar:/github/workspace/src/main/TestCases.java /github/workspace/src/main/TestCases.java
-        java -jar junit-platform-console-standalone-1.8.2.jar --class-path /github/workspace/src/main --scan-class-path
+        FILE_PATH=$(find . -path "*/main/TestCases.java")
+        javac -cp junit-platform-console-standalone-1.8.2.jar:. $FILE_PATH
+        java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
