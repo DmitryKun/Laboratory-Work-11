@@ -1,4 +1,4 @@
-public class SettingsTest {
+public class TestCases {
     public static void printText(String text) {
         System.out.println(text);
     }
