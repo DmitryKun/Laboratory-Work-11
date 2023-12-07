@@ -19,4 +19,4 @@ jobs:
         java-version: '11'
 
     - name: Compile Java code
-      run: javac -d . ProgramCode.java
+      run: javac -d . $(find . -name "*.java")
