@@ -24,4 +24,8 @@ public class SettingsTest {
     public String getStatus() {
         return status;
     }
+
+    public void SettingsTest(){
+        return status;
+    }
 }
