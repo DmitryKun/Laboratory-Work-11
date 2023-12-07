@@ -6,9 +6,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      SOURCE_FILE_PATH: src/main/TestCases.java
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -19,6 +16,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
-    - run: javac -cp junit-platform-console-standalone-1.8.2.jar:. ${{ env.SOURCE_FILE_PATH }}
+    - name: Compile Java code
+      run: javac -cp junit-platform-console-standalone-1.8.2.jar:./main TestCases.java
 
-    - run: java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
+    - name: Run JUnit tests
+      run: java -jar junit-platform-console-standalone-1.8.2.jar --class-path ./main --scan-class-path
