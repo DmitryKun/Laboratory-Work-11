@@ -18,5 +18,5 @@ jobs:
 
     - name: Compile and Run JUnit tests
       run: |
-        javac -cp junit-platform-console-standalone-1.8.2.jar:. ./src/main/TestCases.java
-        java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
+        javac -cp junit-platform-console-standalone-1.8.2.jar:/github/workspace/src/main/TestCases.java /github/workspace/src/main/TestCases.java
+        java -jar junit-platform-console-standalone-1.8.2.jar --class-path /github/workspace/src/main --scan-class-path
